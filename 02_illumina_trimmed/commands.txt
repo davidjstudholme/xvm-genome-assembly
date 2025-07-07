@@ -1,0 +1,15 @@
+### Make symbolic links to raw sequence files
+ln -s ../01_reads/NCPPB_2005.illumina.1.fastq.gz .
+ln -s ../01_reads/NCPPB_2005.illumina.2.fastq.gz .
+ln -s ../01_reads/NCPPB_2251.illumina.1.fastq.gz .
+ln -s ../01_reads/NCPPB_2251.illumina.2.fastq.gz .
+ln -s ../01_reads/NCPPB_4379.illumina.1.fastq.gz .
+ln -s ../01_reads/NCPPB_4379.illumina.2.fastq.gz .
+ln -s ../01_reads/NCPPB_4381.illumina.1.fastq.gz .
+ln -s ../01_reads/NCPPB_4381.illumina.2.fastq.gz .
+ln -s ../01_reads/NCPPB_4395.illumina.1.fastq.gz .
+ln -s ../01_reads/NCPPB_4395.illumina.2.fastq.gz .
+
+### Trim and filter the Illumina reads
+### Assumes that TrimGalore is already installed
+for i in NCPPB_2005 NCPPB_2251 NCPPB_4379 NCPPB_4381 NCPPB_4395; do trim_galore -q 30 --paired $i.illumina.1.fastq.gz $i.illumina.2.fastq.gz; done

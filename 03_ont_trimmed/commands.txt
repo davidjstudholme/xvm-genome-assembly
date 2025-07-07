@@ -1,0 +1,14 @@
+### Make symbolic links to raw sequence files
+ln -s ../01_reads/NCPPB_2005.ont.fastq.gz .
+ln -s ../01_reads/NCPPB_2251.ont.fastq.gz .
+ln -s ../01_reads/NCPPB_4379.ont.fastq.gz .
+ln -s ../01_reads/NCPPB_4381.ont.fastq.gz .
+ln -s ../01_reads/NCPPB_4395.ont.fastq.gz .
+
+### Apply QC to the ONT reads
+### Assumes that Filtlong is already installed
+for i in NCPPB_2005 NCPPB_2251 NCPPB_4379 NCPPB_4381 NCPPB_4395; do echo $i; filtlong --min_length 1000 --keep_percent 95 $i.ont.fastq.gz > $i.ont.filtlong.fastq.gz ; done
+
+
+
+

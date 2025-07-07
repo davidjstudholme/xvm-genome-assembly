@@ -1,0 +1,33 @@
+
+### Download the reads as FASTQ files from Sequence Read Archive
+fasterq-dump SRR34103838 SRR34103839 SRR34103840 SRR34103841 SRR34103842 SRR34105446 SRR34105447 SRR34105448 SRR34105449 SRR34105450
+
+### Compress the FASTQ files
+for i in *.fastq; do echo $i; gzip $i; done
+
+### Rename the compressed FASTQ files
+
+mv SRR34103838_1.fastq.gz NCPPB_4379.illumina.1.fastq.gz
+mv SRR34103838_2.fastq.gz NCPPB_4379.illumina.2.fastq.gz
+
+mv SRR34103839_1.fastq.gz NCPPB_4381.illumina.1.fastq.gz
+mv SRR34103839_2.fastq.gz NCPPB_4381.illumina.2.fastq.gz
+
+mv SRR34103840_1.fastq.gz NCPPB_4395.illumina.1.fastq.gz
+mv SRR34103840_2.fastq.gz NCPPB_4395.illumina.2.fastq.gz
+
+mv SRR34103841_1.fastq.gz NCPPB_2251.illumina.1.fastq.gz
+mv SRR34103841_2.fastq.gz NCPPB_2251.illumina.2.fastq.gz
+
+mv SRR34103842_1.fastq.gz NCPPB_2005.illumina.1.fastq.gz
+mv SRR34103842_2.fastq.gz NCPPB_2005.illumina.2.fastq.gz
+
+mv SRR34105446.fastq.gz NCPPB_4379.ont.fastq.gz
+
+mv SRR34105447.fastq.gz NCPPB_4381.ont.fastq.gz
+
+mv SRR34105448.fastq.gz NCPPB_4395.ont.fastq.gz
+
+mv SRR34105449.fastq.gz NCPPB_2251.ont.fastq.gz
+
+mv SRR34105450.fastq.gz NCPPB_2005.ont.fastq.gz
