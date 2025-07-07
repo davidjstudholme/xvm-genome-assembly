@@ -1,6 +1,3 @@
-*.fna
-*.contig
-*.fasta
 *~
 *.zip
 */datasets
