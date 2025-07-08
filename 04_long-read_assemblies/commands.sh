@@ -16,17 +16,18 @@ mkdir NCPPB_2005.assemblies
 
 ### Flye assembly
 
-for i in 01 04 07 10; do 
-    flye --nano-hq NCPPB_2005.read_subsets/sample_$i.fastq --threads 8 --out-dir assembly_$i
-    cp assembly_$i/assembly.fasta NCPPB_2005.assemblies/assembly_$i.fasta
-    cp assembly_$i/assembly_graph.gfa NCPPB_2005.assemblies/assembly_$i.gfa
-    rm -r assembly_$i
-done
+#for i in 01 04 07 10; do 
+#    flye --nano-hq NCPPB_2005.read_subsets/sample_$i.fastq --threads 8 --out-dir assembly_$i
+#    cp assembly_$i/assembly.fasta NCPPB_2005.assemblies/assembly_$i.fasta
+#    cp assembly_$i/assembly_graph.gfa NCPPB_2005.assemblies/assembly_$i.gfa
+#    rm -r assembly_$i
+#done
 
 ### Miniasm assembly
-for i in 02 05 08 11
-bash miniasm_and_minipolish.sh NCPPB_2005.read_subsets/sample_$i.fastq 8 > NCPPB_2005.assemblies/assembly_$i.gfa
-any2fasta NCPPB_2005.assemblies/assembly_$i.gfa > NCPPB_2005.assemblies/assembly_$i.fasta
+for i in 02 05 08 11; do
+    ./miniasm_and_minipolish.sh NCPPB_2005.read_subsets/sample_$i.fastq 8 > NCPPB_2005.assemblies/assembly_$i.gfa
+    any2fasta NCPPB_2005.assemblies/assembly_$i.gfa > NCPPB_2005.assemblies/assembly_$i.fasta
+done
 
 ### Raven assembly
 for i in 03 06 09 12; do

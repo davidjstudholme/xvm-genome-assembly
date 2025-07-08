@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 # This script combines minimap2, miniasm and minipolish into a single command
 # for easier execution.
