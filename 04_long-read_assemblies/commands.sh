@@ -10,7 +10,7 @@
 #trycycler subsample --reads ../03_ont_trimmed/NCPPB_4395.ont.filtlong.fastq.gz  --out_dir NCPPB_4395.read_subsets --genome_size 4.9m --count 12
 
 
-for strain in NCPPB_2251 NCPPB_4379 NCPPB_4381 NCPPB_4395; do
+for strain in NCPPB_2005 NCPPB_2251 NCPPB_4379 NCPPB_4381 NCPPB_4395; do
     echo $strain
     
 
