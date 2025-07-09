@@ -7,6 +7,7 @@ ln -s ../01_reads/NCPPB_4395.ont.fastq.gz .
 
 ### Apply QC to the ONT reads
 ### Assumes that Filtlong is already installed
+### Note that the Filtlong output is FASTQ and not gzipped FASTQ!!! Need to fix this command line to relfect that.
 for i in NCPPB_2005 NCPPB_2251 NCPPB_4379 NCPPB_4381 NCPPB_4395; do echo $i; filtlong --min_length 1000 --keep_percent 95 $i.ont.fastq.gz > $i.ont.filtlong.fastq.gz ; done
 
 
