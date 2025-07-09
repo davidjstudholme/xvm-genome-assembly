@@ -1,5 +1,6 @@
 ### Activate Conda environment
 #conda activate trycycler_env
+#conda install minimap2=2.24
 conda list -n phame_env > trycycler_env_packages.txt
 
 ### Cluster the contigs
@@ -24,15 +25,6 @@ trycycler dotplot --cluster_dir NCPPB_4381.trycycler/cluster_001
 trycycler dotplot --cluster_dir NCPPB_4395.trycycler/cluster_001
 trycycler dotplot --cluster_dir NCPPB_4395.trycycler/cluster_002
 
-### Remove problematic clusters
-rm -fr NCPPB_2251.trycycler/cluster_002
-rm -fr NCPPB_4379.trycycler/cluster_002
-rm -fr NCPPB_4379.trycycler/cluster_003
-rm -fr NCPPB_4379.trycycler/cluster_004
-rm -fr NCPPB_4379.trycycler/cluster_005
-rm -fr NCPPB_4379.trycycler/cluster_006
-rm -fr NCPPB_4381.trycycler/cluster_002
-
 ### Remove problematic contigs
 rm NCPPB_2251.trycycler/cluster_001/1_contigs/H_contig_1.fasta
 rm NCPPB_2251.trycycler/cluster_001/1_contigs/I_contig_1.fasta
@@ -40,9 +32,6 @@ rm NCPPB_2251.trycycler/cluster_001/1_contigs/G_utg000001l.fasta
 rm NCPPB_2251.trycycler/cluster_001/1_contigs/C_Utg1400.fasta
 rm NCPPB_2251.trycycler/cluster_001/1_contigs/E_utg000001c.fasta
 rm NCPPB_4379.trycycler/cluster_001/1_contigs/F_contig_1.fasta
-rm NCPPB_4379.trycycler/cluster_001/1_contigs/B_utg000001l.fasta
-rm NCPPB_4379.trycycler/cluster_001/1_contigs/C_Utg1326.fasta
-rm NCPPB_4379.trycycler/cluster_001/1_contigs/E_utg000001c.fasta
 rm NCPPB_4379.trycycler/cluster_007/1_contigs/E_utg000002l.fasta
 rm NCPPB_4381.trycycler/cluster_001/1_contigs/D_contig_1.fasta
 rm NCPPB_4381.trycycler/cluster_001/1_contigs/E_utg000001l.fasta 
@@ -82,6 +71,3 @@ trycycler  consensus --cluster_dir NCPPB_4379.trycycler/cluster_007
 trycycler  consensus --cluster_dir NCPPB_4381.trycycler/cluster_001
 trycycler  consensus --cluster_dir NCPPB_4395.trycycler/cluster_001
 trycycler  consensus --cluster_dir NCPPB_4395.trycycler/cluster_002
-
-
-
