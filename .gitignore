@@ -13,6 +13,7 @@
 *.bam
 *.bam.bai
 *.bai
+*.sam
 
 ### BLAST-related files
 *.nhr

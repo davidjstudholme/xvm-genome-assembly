@@ -2,7 +2,6 @@
 #conda activate trycycler_env
 conda list -n phame_env > trycycler_env_packages.txt
 
-
 ### Cluster the contigs
 trycycler cluster --assemblies ../04_long-read_assemblies/NCPPB_2005.assemblies/*.fasta --reads ../03_ont_trimmed/NCPPB_2005.ont.filtlong.fastq.gz --out_dir NCPPB_2005.trycycler
 trycycler cluster --assemblies ../04_long-read_assemblies/NCPPB_2251.assemblies/*.fasta --reads ../03_ont_trimmed/NCPPB_2251.ont.filtlong.fastq.gz --out_dir NCPPB_2251.trycycler
@@ -41,6 +40,9 @@ rm NCPPB_2251.trycycler/cluster_001/1_contigs/G_utg000001l.fasta
 rm NCPPB_2251.trycycler/cluster_001/1_contigs/C_Utg1400.fasta
 rm NCPPB_2251.trycycler/cluster_001/1_contigs/E_utg000001c.fasta
 rm NCPPB_4379.trycycler/cluster_001/1_contigs/F_contig_1.fasta
+rm NCPPB_4379.trycycler/cluster_001/1_contigs/B_utg000001l.fasta
+rm NCPPB_4379.trycycler/cluster_001/1_contigs/C_Utg1326.fasta
+rm NCPPB_4379.trycycler/cluster_001/1_contigs/E_utg000001c.fasta
 rm NCPPB_4379.trycycler/cluster_007/1_contigs/E_utg000002l.fasta
 rm NCPPB_4381.trycycler/cluster_001/1_contigs/D_contig_1.fasta
 rm NCPPB_4381.trycycler/cluster_001/1_contigs/E_utg000001l.fasta 
@@ -71,8 +73,6 @@ trycycler partition --reads ../03_ont_trimmed/NCPPB_4379.ont.filtlong.fastq.gz -
 trycycler partition --reads ../03_ont_trimmed/NCPPB_4381.ont.filtlong.fastq.gz --cluster_dir NCPPB_4381.trycycler/cluster_001
 trycycler partition --reads ../03_ont_trimmed/NCPPB_4395.ont.filtlong.fastq.gz --cluster_dir NCPPB_4395.trycycler/cluster_001
 trycycler partition --reads ../03_ont_trimmed/NCPPB_4395.ont.filtlong.fastq.gz --cluster_dir NCPPB_4395.trycycler/cluster_002
-
-
 
 ### Generate a consensus
 trycycler  consensus --cluster_dir NCPPB_2005.trycycler/cluster_001
