@@ -35,6 +35,7 @@ for strain in NCPPB_2005 NCPPB_2251 NCPPB_4379 NCPPB_4381 NCPPB_4395; do
     ### Raven assembly
     for i in 03 06 09 12; do
 	raven --threads 8 --disable-checkpoints --graphical-fragment-assembly assemblies/assembly_03.gfa $strain.read_subsets/sample_03.fastq > $strain.assemblies/assembly_03.fasta
+ 	### Should be: raven --threads 8 --disable-checkpoints --graphical-fragment-assembly assemblies/assembly_$i.gfa $strain.read_subsets/sample_$i.fastq > $strain.assemblies/assembly_$i.fasta
     done
     
 done
