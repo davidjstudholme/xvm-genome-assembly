@@ -1,6 +1,7 @@
 ### Activate Conda environment
 #conda activate trycycler_env
 conda list -n phame_env > trycycler_env_packages.txt
+conda env export > trycycler_env.yaml
 
 ### Make symbolic links to consensus contigs
 ln -s ../05_trycycler/NCPPB_2005.trycycler/cluster_001/7_final_consensus.fasta NCPPB_2005_001.final_consensus.fasta
