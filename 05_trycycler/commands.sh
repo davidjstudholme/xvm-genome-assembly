@@ -2,6 +2,7 @@
 #conda activate trycycler_env
 #conda install minimap2=2.24
 conda list -n phame_env > trycycler_env_packages.txt
+conda env export > trycycler_env.yaml
 
 ### Cluster the contigs
 trycycler cluster --assemblies ../04_long-read_assemblies/NCPPB_2005.assemblies/*.fasta --reads ../03_ont_trimmed/NCPPB_2005.ont.filtlong.fastq.gz --out_dir NCPPB_2005.trycycler
