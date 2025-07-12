@@ -1,6 +1,7 @@
 ### Activateconda environment
 #conda activate trycycler_env
-#conda list -n phame_env > trycycler_env_packages.txt
+conda list -n phame_env > trycycler_env_packages.txt
+conda env export > trycycler_env.yaml
 
 ### Generate subsamples of ONT reads
 #trycycler subsample --reads ../03_ont_trimmed/NCPPB_2005.ont.filtlong.fastq.gz  --out_dir NCPPB_2005.read_subsets --genome_size 4.9m --count 12
