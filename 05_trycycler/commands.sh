@@ -1,7 +1,7 @@
 ### Activate Conda environment
 #conda activate trycycler_env
 #conda install minimap2=2.24
-conda list -n phame_env > trycycler_env_packages.txt
+conda list -n trycycler_env > trycycler_env_packages.txt
 conda env export > trycycler_env.yaml
 
 ### Cluster the contigs
